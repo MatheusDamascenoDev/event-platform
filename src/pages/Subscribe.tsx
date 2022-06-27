@@ -1,4 +1,3 @@
-import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
@@ -16,7 +15,7 @@ export function Subscribe() {
     await createSubscriber({
       variables: {
         name,
-        email
+        email,
       }
     })
 
@@ -56,8 +55,9 @@ export function Subscribe() {
 
             <button 
               type="submit"
-              className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50"
               disabled={loading}
+              className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50"
+              
             >
               Garantir minha vaga
             </button>

@@ -5625,7 +5625,7 @@ export type CreateSubscriberMutationResult = Apollo.MutationResult<CreateSubscri
 export type CreateSubscriberMutationOptions = Apollo.BaseMutationOptions<CreateSubscriberMutation, CreateSubscriberMutationVariables>;
 export const GetLessonBySlugDocument = gql`
     query GetLessonBySlug($slug: String) {
-  lesson(where: {slug: "$slug"}) {
+  lesson(where: {slug: $slug}) {
     title
     videoId
     description
